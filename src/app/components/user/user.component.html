@@ -1,0 +1,42 @@
+<div class="container">
+<a href="/home">Voltar para home</a>
+
+<form [formGroup]="formUser">
+  
+<div class="form-group">
+  <label form="nome">Nome</label>
+  <input type="text" name="nome" formControlName="nome">
+  <!-- formControlName é o nome da chave  do formGroup que vc deseja manipular -->
+</div>
+
+<div class="form-group">
+  <label form="sobrenome">Sobrenome</label>
+  <input  class="form-control" type="text" name="sobrenome" formControlName="sobrenome">
+  <!-- formControlName é o nome da chave  do formGroup que vc deseja manipular -->
+</div>
+
+<div class="form-group">
+  <label form="email">email</label>
+  <input class="form-control" type="text" name="email" formControlName="email">
+  <!-- formControlName é o nome da chave  do formGroup que vc deseja manipular -->
+</div>
+
+<div class="form-group">
+  <label form="telefone">telefone</label>
+  <input class="form-control" type="text" name="telefone" formControlName="telefone">
+  <!-- formControlName é o nome da chave  do formGroup que vc deseja manipular -->
+</div>
+</form>
+
+<button type="button" name="button" (click)="novoUsuario()">Add novo usuario</button>
+
+<h1>Meu nome é: {{formUser.value.nome}}</h1>
+<h1>Meu sobrenome é: {{formUser.value.sobrenome}}</h1>
+<h1>Meu email é: {{formUser.value.email}}</h1>
+<h1>Meu telefone é: {{formUser.value.telefone}}</h1>
+
+</div>
+
+<pre>
+  {{user | json}}
+</pre>
